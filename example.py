@@ -1,6 +1,6 @@
 # import pygame module in this program
 import pygame
-
+import time
 pem = "images/PEMcells.png"
 
 smallH = "images/hydrogen+.png"
@@ -103,12 +103,24 @@ while run:
     while True:
         i = 0
         while i < 100:
-            pygame.draw.rect(screen, (255, 0, 0), (170-i,160 , width, height))
-            i=i+1
+            screen.blit(background, (0, 0))
+            position = hydrogen2.get_rect()
+            position = position.move(170-i, 160)
+            screen.blit(hydrogen2, position)
+            pygame.draw.rect(screen, (255, 0, 0), (i,160 , width, height))
+            pygame.display.update()
+            pygame.time.delay(10)
+            i+=1
+            print(i)
+            
+            
+            pygame.display.update()
+            
+            screen.blit(hydrogen2, (170, 160))
         if not i<100:
             break
     # it refreshes the window
-    pygame.display.update()
-
+        pygame.display.update()
+pygame.display.update()
 # closes the pygame window
 pygame.quit()
