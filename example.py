@@ -100,9 +100,13 @@ while run:
     screen.blit(hydrogen, (500, 300))
 
     # drawing object on screen which is rectangle here
-   
-    pygame.draw.rect(screen, (255, 0, 0), (x, y, width, height))
-
+    while True:
+        i = 0
+        while i < 100:
+            pygame.draw.rect(screen, (255, 0, 0), (170-i,160 , width, height))
+            i=i+1
+        if not i<100:
+            break
     # it refreshes the window
     pygame.display.update()
 
