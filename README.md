@@ -12,5 +12,5 @@ python3 -m simulator.py
 ```
 
 <p align="center">
-    <img alt="fuel cell" src="./images/fuelCellPic.png" width="250">
+    <img alt="fuel cell" src="./images/fuelCellPic.png" width="500" height="800">
 </p>
